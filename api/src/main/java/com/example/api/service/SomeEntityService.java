@@ -27,15 +27,22 @@ public class SomeEntityService {
     }
 
     public SomeEntity createEntity(SomeEntity entity) {
-        return repository.save(entity);
+        return repository.create(entity);
     }
 
     public SomeEntity updateEntity(Long id, SomeEntity entity) {
+        if (repository.findById(id) == null) {
+            throw new EntityNotFoundException(id);
+        }
         entity.setId(id);
-        return repository.save(entity);
+        return repository.update(entity);
     }
 
     public void deleteEntity(Long id) {
+        SomeEntity entity = repository.findById(id);
+        if (entity == null) {
+            throw new EntityNotFoundException(id);
+        }
         repository.deleteById(id);
     }
 }

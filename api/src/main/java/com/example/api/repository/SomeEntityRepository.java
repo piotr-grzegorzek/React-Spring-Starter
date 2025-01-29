@@ -27,14 +27,19 @@ public class SomeEntityRepository {
         }
     }
 
-    public SomeEntity save(SomeEntity entity) {
+    public SomeEntity create(SomeEntity entity) {
         try (Session session = sessionFactory.openSession()) {
             Transaction tx = session.beginTransaction();
-            if (entity.getId() == null) {
-                session.persist(entity);
-            } else {
-                entity = session.merge(entity);
-            }
+            session.persist(entity);
+            tx.commit();
+            return entity;
+        }
+    }
+
+    public SomeEntity update(SomeEntity entity) {
+        try (Session session = sessionFactory.openSession()) {
+            Transaction tx = session.beginTransaction();
+            entity = session.merge(entity);
             tx.commit();
             return entity;
         }
@@ -44,9 +49,7 @@ public class SomeEntityRepository {
         try (Session session = sessionFactory.openSession()) {
             Transaction tx = session.beginTransaction();
             SomeEntity entity = session.get(SomeEntity.class, id);
-            if (entity != null) {
-                session.remove(entity);
-            }
+            session.remove(entity);
             tx.commit();
         }
     }
