@@ -1,6 +1,6 @@
 # React-Spring-Starter
 
-## Frontend
+### Frontend
 
 - react
 - vite
@@ -15,13 +15,13 @@
 - react router
 - react-hook-form
 
-## Backend
+### Backend
 
 - spring boot
 - hibernate
 - maven
 
-## Other
+### Other
 
 - postgres
 - docker
