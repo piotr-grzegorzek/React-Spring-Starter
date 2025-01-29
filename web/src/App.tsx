@@ -2,9 +2,8 @@ import * as React from 'react';
 import { Button } from '@/components/ui/button';
 import { Calendar } from '@/components/ui/calendar';
 
-function App() {
+export default function App() {
 	const [date, setDate] = React.useState<Date | undefined>(new Date());
-
 	return (
 		<>
 			<Button>Click me</Button>
@@ -12,5 +11,3 @@ function App() {
 		</>
 	);
 }
-
-export default App;
