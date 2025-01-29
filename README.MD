@@ -2,8 +2,8 @@
 
 ## Frontend
 
-react
-vite
+- react
+- vite
 shadcn
 tailwind
 date fns
