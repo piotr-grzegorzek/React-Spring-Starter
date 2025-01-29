@@ -4,33 +4,33 @@
 
 - react
 - vite
-shadcn
-tailwind
-date fns
-lucide icons
-eslint, prettier
-ts
-zustand
-zod
-react router
-react-hook-form
+- shadcn
+- tailwind
+- date fns
+- lucide icons
+- eslint, prettier
+- ts
+- zustand
+- zod
+- react router
+- react-hook-form
 
 ## Backend
 
-spring boot
-hibernate
-maven
+- spring boot
+- hibernate
+- maven
 
 ## Other
 
-postgres
-docker
+- postgres
+- docker
 
 ### To do
 
-full docker deployment
+- full docker deployment
 
-react vite code splitting
+- react vite code splitting
 
 ### Helpful links
 
