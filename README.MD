@@ -26,6 +26,14 @@
 - postgres
 - docker
 
+### Notes
+
+Make sure to check the following files to adapt them to you needs:
+
+- .env (create if doesnt exist)
+- deploy.py
+- api/src/main/java/com/example/api/bean/HibernateConfig.java
+
 ### To do
 
 - full docker deployment
