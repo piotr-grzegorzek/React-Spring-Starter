@@ -62,6 +62,7 @@ def restart_docker():
 
 
 def main():
+    """Main function to deploy the application."""
     print("=== Deployment Started ===")
 
     # Always overwrite Docker Compose files
