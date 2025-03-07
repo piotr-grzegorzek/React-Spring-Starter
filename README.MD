@@ -36,6 +36,7 @@ Make sure to check the following files to adapt them to you needs:
 
 ### To do
 
+- react scan
 - full docker deployment
 
 - react vite code splitting
